@@ -225,9 +225,16 @@
  
         /* ─── Serviços ─── */
         #servicos {
-            background-image: linear-gradient(to right,#021F59,#0339A6 ) ;
-            padding-bottom: 70px;
+            background-color: #0b1f6b;
+  background-image:
+    radial-gradient(ellipse 80% 200% at 50% -10%, #2255cc 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, #1a3a9e 0%, transparent 60%),
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff06 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+  padding-bottom: 80px;
         }
+
  
         #quadrados {
             display: grid;
@@ -239,41 +246,70 @@
         }
  
 
-        .caixinha {
+        .caixinhaA{
             background-color: white;
             padding: 24px 20px;
-            border-radius: var(--radius);
+            border-radius: 10px 10px 0px 0px;
             height: auto;
             min-height: 230px;
             box-shadow: 2px 3px 8px rgba(0,0,0,0.4);
-            transition: transform 0.2s;
-            
+            transition: transform 0.2s;   
+        }
+         .caixinhaB{
+            background-color: white;
+            padding: 24px 20px;
+            border-radius: 0px 0px 10px 10px;
+            height: auto;
+            min-height: 230px;
+            box-shadow: 2px 3px 8px rgba(0,0,0,0.4);
+            transition: transform 0.2s;   
         }
 
-  
- 
-        .caixinha:hover {
+        .caixinhaA:hover {
+            transform: translateY(-4px);
+        }
+        .caixinhaB:hover {
             transform: translateY(-4px);
         }
  
-        .caixinha .material-symbols-outlined {
+        .caixinhaA .material-symbols-outlined {
             display: inline-block;
             padding: 6px 8px;
             border-radius: var(--radius);
             font-size: 2rem;
-            color: #f6f60f;
-            background-color: var(--gold);
+            color:white;
+            background:radial-gradient(#ff8800, #ffaa00);
             margin-bottom: 14px;
         }
+        .caixinhaB .material-symbols-outlined {
+            display: inline-block;
+            padding: 6px 8px;
+            border-radius: var(--radius);
+            font-size: 2rem;
+            color:white;
+            background:radial-gradient(#ff8800, #ffaa00);
+            margin-bottom: 14px;
+            }
  
-        .caixinha h3 {
+        .caixinhaA h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #111;
+        }
+        .caixinhaB h3 {
             font-size: 1.05rem;
             font-weight: 700;
             margin-bottom: 10px;
             color: #111;
         }
  
-        .caixinha p {
+        .caixinhaA p {
+            font-size: 0.92rem;
+            line-height: 1.6;
+            color: #444;
+        }
+         .caixinhaB p {
             font-size: 0.92rem;
             line-height: 1.6;
             color: #444;
@@ -313,8 +349,8 @@
             padding: 6px 8px;
             border-radius: var(--radius);
             font-size: 2.6rem;
-            color: #f6f60f;
-            background-color: var(--gold);
+            color:#f6f60f;
+            background:radial-gradient(#ff8800, #ffaa00);
         }
  
         .process h3 {
@@ -408,6 +444,8 @@
             font-size: 1.8rem;
             color: #f6f60f;
             background-color: var(--gold);
+            
+
         }
  
         .cx h3 {
@@ -424,8 +462,17 @@
  
         /* ─── Projetos ─── */
         #projetos {
-            background: linear-gradient(135deg, #010f30, #021840);
-            padding-bottom: 80px;
+background-color: #150d2e;
+background-image:
+  radial-gradient(ellipse 80% 200% at 50% -10%, #3a1a7a 0%, transparent 70%),
+  radial-gradient(ellipse 60% 50% at 80% 80%, #0a0a1a 0%, transparent 60%),
+  linear-gradient(to bottom, transparent 60%, #0a0a1a 0%),
+  linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+  linear-gradient(90deg, #ffffff06 1px, transparent 1px);
+background-size: auto, auto, auto, 48px 48px, 48px 48px;
+padding-bottom: 80px;
+
+
         }
  
         #caixa {
@@ -556,6 +603,7 @@
   padding: 60px 20px;
   overflow: hidden;
   background: linear-gradient(to bottom, #0a0a1a, #1a1040, #2d1b5e); /* fundo noite */
+  padding-bottom: 80px;
 }
 
 /* camada do dia fica por baixo, invisível no início */
